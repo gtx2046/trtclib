@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingDefaultResource">
+  <color name="online_white">#fff</color>
+  <color name="online_cdddcdc">#dddcdc</color>
+  <color name="online_c62">#222222</color>
+  <color name="online_c69">#999999</color>
+  <color name="online_cce0000">#ce0000</color>
+  <color name="online_c68">#888888</color>
+  <color name="online_cfce2a9">#fce2a9</color>
+  <color name="online_btn_press">#37cdbc</color>
+  <color name="online_c353535">#353535</color>
+  <color name="online_cc5c5c5">#c5c5c5</color>
+  <color name="online_cf7f7f7">#f7f7f7</color>
+  <color name="online_c6e">#eeeeee</color>
+  <color name="online_c60">#000000</color>
+  <color name="online_c63">#333333</color>
+  <color name="online_cfefefe">#fefefe</color>
+  <color name="online_black">#000</color>
+  <color name="online_c65">#555555</color>
+  <color name="online_c6c">#cccccc</color>
+  <color name="hlfTransparent">#30000000</color>
+  <color name="line_btn">#BBBBBB</color>
+  <color name="colorBtn">#016EFF</color>
+  <color name="top_hasclick">#648DF6</color>
+  <color name="top_hasnoclick">#CBD7F7</color>
+  <color name="top_hasnoclickfinish">#F9CCCC</color>
+  <color name="color_FFCFCFCF">#FFCFCFCF</color>
+  <color name="color_FF9CDEE2">#FF9CDEE2</color>
+  <color name="color_FFFCB4B4">#FFFCB4B4</color>
+  <color name="color_FF9F9F">#FF9F9F</color>
+  <color name="color_65CED6">#65CED6</color>
+
+  <color name="color_FFC321">#FFC321</color>
+  <color name="color_1296DB">#1296DB</color>
+  <color name="color_45BF3B">#45BF3B</color>
+  <color name="color_ED4C4C">#ED4C4C</color>
+  <color name="color_FFE8AC">#FFE8AC</color>
+  <color name="color_FF9300">#FF9300</color>
+  <color name="color_AAC4EF">#AAC4EF</color>
+  <color name="color_FF5F5F">#FF5F5F</color>
+  <color name="color_F5F5FE">#F5F5FE</color>
+  <color name="color_DFE0E2">#DFE0E2</color>
+  <color name="color_A6A6A6">#A6A6A6</color>
+  <color name="color_FBFBFB">#FBFBFB</color>
+  <color name="color_FF9921">#FF9921</color>
+  <color name="color_3576E0">#3576E0</color>
+  <color name="color_BFC0C6">#BFC0C6</color>
+
+  <drawable name="sugg_model_item_pressed">#f8f8f8</drawable>
+  <drawable name="sugg_model_item_normal">#fff</drawable>
+
+  <color name="color_EDFFF6">#EDFFF6</color>
+  <color name="color_62caa4">#62caa4</color>
+  <color name="color_DDE6FC">#DDE6FC</color>
+  <color name="kangxin_color_0086d1">#0086d1</color>
+  <drawable name="translate">#00000000</drawable>
+
+  <color name="search_bg">#7BA6EC</color>
+  <color name="colorGray3">#f8f8f8</color>
+  <color name="red">#F44336</color>
+
+  <color name="split_line">#11112233</color>
+  <color name="text1">#59B29C</color>
+  <color name="text2">#333333</color>
+
+  <color name="color1">#F0F0F0</color>
+  <color name="color2">#FFFFFF</color>
+  <color name="color3">#B0B0B0</color>
+  <color name="color4">#666666</color>
+  <color name="color5">#57C5E8</color>
+  <color name="color_00AEBC">#00AEBC</color>
+
+  <color name="normal_cell_bg">#FEFFFE</color>
+  <color name="white">#ffffff</color>
+  <color name="bg_line">#E7E7E7</color>
+  <color name="text_dark1">#333333</color>
+  <color name="text_dark2">#666666</color>
+  <color name="text_dark3">#999999</color>
+  <color name="color_FF999999">#FF999999</color>
+  <color name="booking">#f9266f</color>
+  <color name="staying">#64d8ef</color>
+  <color name="left">#a981ff</color>
+  <color name="bg_color">#FF99DCD7</color>
+  <color name="tab_indicator_color">#66aea9</color>
+  <color name="tab_text_color">#74c6c0</color>
+  <color name="color_e0ebfc">#e0ebfc</color>
+  <color name="color_3979dd">#3979dd</color>
+
+  <color name="color_FFFFA826">#FFFFA826</color>
+  <color name="color_FFFFEFD7">#FFFFEFD7</color>
+  <color name="color_FF3576E0">#FF3576E0</color>
+
+
+  <color name="partition_line">#F0F0F0</color>
+  <color name="orange_FFC321">#FFC321</color>
+  <color name="gray_BEBEBE">#BEBEBE</color>
+  <color name="color_EBEBEB">#EBEBEB</color>
+  <color name="orange_F4E4BA">#F4E4BA</color>
+  <color name="orange_FDF2C3">#FDF2C3</color>
+  <color name="orange_F4801C">#F4801C</color>
+  <color name="blue_5863DE">#5863DE</color>
+  <color name="page_bg">#F0F0F0</color>
+  <color name="color_B9B9B9">#B9B9B9</color>
+
+  <color name="color_F0F0F0">#F0F0F0</color>
+  <color name="color_EAEDF0">#EAEDF0</color>
+  <color name="color_8E979F">#8E979F</color>
+  <color name="color_FFF3CB">#FFF3CB</color>
+  <color name="color_FF9F07">#FF9F07</color>
+  <color name="color_D6EDFF">#D6EDFF</color>
+  <color name="color_414141">#414141</color>
+  <color name="color_EAEDF1">#EAEDF1</color>
+  <color name="color_ECF8E7">#ECF8E7</color>
+  <color name="color_09AF89">#09AF89</color>
+
+  <color name="waittreat_orangetxtcolor">#FF9F07</color>
+  <color name="finished_greenxtcolor">#09AF89</color>
+  <color name="consing_bluetxtcolor">#3576E0</color>
+  <color name="exitpay_redtxtcolor">#FF5F5F</color>
+  <!--图片选择-->
+  <color name="app_color_grey">#393a3e</color>
+  <color name="app_color_black">#000000</color>
+  <color name="app_color_f6">#f6f6f6</color>
+  <color name="app_color_fa">#fafafa</color>
+  <color name="app_color_divider">#B6B6B6</color>
+  <color name="app_color_c51">#f94c51</color>
+  <color name="app_color_green">#43c117</color>
+  <color name="app_color_53575e">#53575e</color>
+  <color name="app_color_transparent">#00000000</color>
+  <color name="app_color_white">#FFFFFF</color>
+  <color name="app_color_blue">#7D7DFF</color>
+  <color name="app_color_9b">#9b9b9b</color>
+  <color name="app_color_e0ff6100">#E0FF6100</color>
+  <color name="app_color_red">#FF0000</color>
+  <color name="color_5ebb92">#5EBB92</color>
+
+  <color name="lightColorPrimary">#E6EEFF</color>
+
+  <color name="btn_unselect_color">#7AA8ED</color>
+  <color name="color_E4E4E4">#E4E4E4</color>
+</resources>

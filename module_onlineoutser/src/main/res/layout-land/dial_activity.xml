@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/online_c62"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="@dimen/online_dp_10"
+            android:layout_marginTop="@dimen/online_dp_20"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_header"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/online_dp_20"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toRightOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/avatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@+id/doc_name"
+            app:layout_constraintTop_toBottomOf="@+id/doc_name" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/online_dp_50"
+            android:text=""
+            android:textColor="@color/online_white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/hang"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/hang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/online_dp_10"
+            android:focusable="true"
+            android:clickable="true"
+            android:src="@drawable/icon_phone_hang"
+            android:nextFocusLeft="@id/answer"
+            android:nextFocusRight="@id/answer"
+            app:layout_constraintBottom_toTopOf="@+id/tv_hang"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/answer" />
+
+
+        <TextView
+            android:id="@+id/tv_hang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/online_dp_40"
+            android:text="拒绝"
+            android:textColor="@color/online_white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/hang"
+            app:layout_constraintRight_toRightOf="@+id/hang" />
+
+
+        <ImageView
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_video_answer"
+            app:layout_constraintLeft_toRightOf="@+id/hang"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hang"
+            android:focusable="true"
+            android:clickable="true"
+            android:nextFocusLeft="@id/hang"
+            android:nextFocusRight="@id/hang"/>
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/online_white"
+            android:textSize="14sp"
+            android:text="接听"
+            app:layout_constraintLeft_toLeftOf="@+id/answer"
+            app:layout_constraintRight_toRightOf="@+id/answer"
+            app:layout_constraintTop_toTopOf="@+id/tv_hang" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>
+

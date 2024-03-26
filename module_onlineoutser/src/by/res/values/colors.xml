@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <color name="medic_patient_name_color">#28549F</color>
+  <color name="medic_patient_name_bg_color">#DCE8FF</color>
+  <color name="medic_patient_time_color">#DDE6FC</color>
+</resources>

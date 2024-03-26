@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:visibility="visible">
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/remote"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:background="#0001e1"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <com.tencent.rtmp.ui.TXCloudVideoView
+        android:id="@+id/local"
+        android:layout_width="@dimen/x120"
+        android:layout_height="@dimen/x180"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="#0001e1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sub_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="小白吗" />
+
+
+    <ImageView
+        android:id="@+id/minimize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/online_dp_10"
+        android:layout_marginTop="@dimen/online_dp_10"
+        android:src="@drawable/icon_minimize"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bigw_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minimize"
+        tools:ignore="MissingConstraints"
+        tools:text="小白吗" />
+
+
+    <ImageView
+        android:id="@+id/hang_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:clickable="true"
+        android:focusable="true"
+        android:nextFocusUp="@id/tv_hang"
+        android:nextFocusDown="@id/tv_hang"
+        android:src="@drawable/icon_phone_hang"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hang"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/online_toggle" />
+
+    <ImageView
+        android:id="@+id/online_toggle"
+        android:layout_width="@dimen/by_60dp"
+        android:layout_height="@dimen/by_60dp"
+        android:src="@drawable/picture_ic_camera"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/hang_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hang_iv" />
+
+    <TextView
+        android:id="@+id/tv_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="切换摄像头"
+        android:textColor="@color/online_white"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/online_toggle"
+        app:layout_constraintRight_toRightOf="@+id/online_toggle"
+        app:layout_constraintTop_toTopOf="@+id/tv_hang" />
+
+    <TextView
+        android:id="@+id/tv_hang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:text="挂断"
+        android:textColor="@color/online_white"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:nextFocusDown="@id/hang_iv"
+        android:nextFocusUp="@id/hang_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/hang_iv"
+        app:layout_constraintRight_toRightOf="@+id/hang_iv" />
+
+    <TextView
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/online_dp_30"
+        android:textColor="@color/white"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/hang_iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/callContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="online_MenuTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+    <item name="actionMenuTextColor">@color/online_white</item>
+    <item name="overlapAnchor">false</item>
+  </style>
+
+  <style name="online_dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowFrame">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+
+  <style name="online_mediumCustomProgressBar" parent="@android:style/Widget.ProgressBar">
+    <item name="android:indeterminateDrawable">@drawable/online_progress_medium_holo</item>
+  </style>
+
+  <style name="online_itemTime">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">center_horizontal</item>
+    <item name="android:layout_marginBottom">@dimen/online_dp_12</item>
+    <item name="android:layout_marginLeft">@dimen/online_dp_17</item>
+    <item name="android:layout_marginRight">@dimen/online_dp_17</item>
+    <item name="android:layout_marginTop">@dimen/online_dp_12</item>
+    <item name="android:textColor">@color/color_999999</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textSize">@dimen/by_14sp</item>
+  </style>
+
+  <style name="online_systemItem">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">center_horizontal</item>
+    <item name="android:layout_marginBottom">@dimen/online_dp_12</item>
+    <item name="android:layout_marginLeft">@dimen/online_dp_17</item>
+    <item name="android:layout_marginRight">@dimen/online_dp_17</item>
+    <item name="android:layout_marginTop">@dimen/online_dp_12</item>
+    <item name="android:textColor">@color/color_666666</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:padding">@dimen/online_dp_10</item>
+    <item name="android:textSize">@dimen/online_sp_14</item>
+  </style>
+
+  <style name="online_ChattingUIAvatarTo">
+    <item name="android:layout_width">48.0dip</item>
+    <item name="android:layout_height">48.0dip</item>
+    <item name="android:layout_marginLeft">3.0dip</item>
+  </style>
+
+  <style name="online_ChattingUISplit">
+    <item name="android:textSize">@dimen/sp_14</item>
+    <item name="android:textColor">@color/online_c68</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:layout_gravity">center</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingLeft">@dimen/online_dp_6</item>
+    <item name="android:paddingRight">@dimen/online_dp_6</item>
+    <item name="android:paddingTop">@dimen/online_dp_2</item>
+    <item name="android:paddingBottom">@dimen/online_dp_2</item>
+  </style>
+
+  <style name="online_smallCustomProgressBar" parent="@android:style/Widget.ProgressBar.Small">
+    <item name="android:paddingLeft">6.0dip</item>
+    <item name="android:paddingRight">6.0dip</item>
+  </style>
+
+  <style name="online_ChattingUIVoiceLength">
+    <item name="android:textSize">@dimen/sp_14</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/online_c68</item>
+    <item name="android:gravity">center</item>
+    <item name="android:padding">@dimen/online_dp_8</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="online_textViewButton">
+    <item name="android:paddingTop">@dimen/online_dp_10</item>
+    <item name="android:paddingBottom">@dimen/online_dp_10</item>
+    <item name="android:background">@drawable/online_btn_bg</item>
+    <item name="android:textSize">@dimen/online_sp_16</item>
+    <item name="android:textColor">@color/online_white</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_margin">@dimen/online_dp_10</item>
+  </style>
+
+  <style name="online_ChatEditText">
+    <item name="android:textSize">@dimen/online_sp_16</item>
+    <item name="android:textColor">@color/online_c353535</item>
+    <item name="android:textColorHint">@color/online_cc5c5c5</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingTop">@dimen/online_dp_4</item>
+    <item name="android:paddingBottom">@dimen/online_dp_4</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:minHeight">@dimen/online_dp_32</item>
+    <item name="android:singleLine">true</item>
+  </style>
+
+  <style name="room_setting_dlg" parent="@android:style/Theme.Holo.Dialog">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowCloseOnTouchOutside">true</item>
+  </style>
+
+  <style name="Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+  </style>
+
+</resources>

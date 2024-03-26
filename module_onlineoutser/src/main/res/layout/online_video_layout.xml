@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.tencent.rtmp.ui.TXCloudVideoView
+            android:id="@+id/remote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/online_dp_10"
+            android:layout_marginRight="@dimen/online_dp_10"
+            android:background="#222"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.tencent.rtmp.ui.TXCloudVideoView
+                android:id="@+id/local"
+                android:layout_width="@dimen/x120"
+                android:layout_height="@dimen/x180" />
+
+            <TextView
+                android:id="@+id/sub_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/y10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x14"
+                tools:text="小白吗" />
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/minimize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/online_dp_10"
+            android:layout_marginTop="@dimen/online_dp_10"
+            android:src="@drawable/icon_minimize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bigw_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/y10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minimize"
+            tools:ignore="MissingConstraints"
+            tools:text="小白吗" />
+
+        <FrameLayout
+            android:id="@+id/frame_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/oponline_video_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/hang_iv"
+                    android:layout_width="@dimen/x65"
+                    android:layout_height="@dimen/y65"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:src="@drawable/icon_phone_hang"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_hang"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/online_toggle" />
+
+                <ImageView
+                    android:id="@+id/online_toggle"
+                    android:layout_width="@dimen/x65"
+                    android:layout_height="@dimen/y65"
+                    android:src="@drawable/ic_switch_camera"
+                    app:layout_constraintLeft_toRightOf="@+id/hang_iv"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/hang_iv" />
+
+                <TextView
+                    android:id="@+id/tv_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切换摄像头"
+                    android:textColor="@color/online_white"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/online_toggle"
+                    app:layout_constraintRight_toRightOf="@+id/online_toggle"
+                    app:layout_constraintTop_toTopOf="@+id/tv_hang" />
+
+                <TextView
+                    android:id="@+id/tv_hang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_40"
+                    android:text="挂断"
+                    android:textColor="@color/online_white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/hang_iv"
+                    app:layout_constraintRight_toRightOf="@+id/hang_iv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/online_dp_30"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/frame_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/btn_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="chronometer,minimize,frame_bottom,chronometer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/callContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

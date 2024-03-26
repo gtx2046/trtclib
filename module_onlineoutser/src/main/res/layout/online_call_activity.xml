@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/online_c62">
+
+  <ImageView
+    android:id="@+id/avatar"
+    android:layout_width="@dimen/x25"
+    android:layout_height="@dimen/y25"
+    android:layout_marginStart="@dimen/online_dp_10"
+    android:layout_marginTop="@dimen/online_dp_20"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/y15"
+    android:text="1231"
+    android:textColor="@color/online_white"
+    android:textSize="18sp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+  <ImageView
+    android:id="@+id/userIcon"
+    android:layout_width="@dimen/x100"
+    android:layout_height="@dimen/y100"
+    android:layout_marginBottom="@dimen/y170"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+  <TextView
+    android:id="@+id/hint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/x70"
+    android:layout_marginTop="@dimen/y15"
+    android:layout_marginEnd="@dimen/x70"
+    android:gravity="center"
+    android:lineSpacingExtra="8dp"
+    android:textColor="@color/online_white"
+    android:textSize="16sp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/userIcon"
+    tools:text="" />
+
+  <ImageView
+    android:id="@+id/hang"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/online_dp_10"
+    android:src="@drawable/icon_phone_hang"
+    app:layout_constraintBottom_toTopOf="@+id/tv_hang"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent" />
+
+
+  <TextView
+    android:id="@+id/tv_hang"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/online_dp_40"
+    android:text="@string/onlineoutser_xml_quxiao"
+    android:textColor="@color/online_white"
+    android:textSize="14sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="@+id/hang"
+    app:layout_constraintRight_toRightOf="@+id/hang" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

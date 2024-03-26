@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_333333">
+
+    <ImageView
+      android:id="@+id/p_head"
+      android:layout_width="@dimen/x100"
+      android:layout_height="@dimen/y100"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="@dimen/y200"
+      android:src="@drawable/ic_user_header"
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:visibility="invisible"/>
+
+    <TextView
+      android:id="@+id/p_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="@dimen/y10"
+      android:textColor="@color/white"
+      android:textSize="@dimen/x14"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/p_head"
+      tools:ignore="MissingConstraints"
+      tools:text="小白吗" />
+
+      <ImageView
+        android:id="@+id/hang"
+        android:layout_width="@dimen/x65"
+        android:layout_height="@dimen/y65"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:src="@drawable/icon_phone_hang"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hang"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+      <TextView
+        android:id="@+id/tv_hang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:text="挂断"
+        android:textColor="@color/online_white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/hang"
+        app:layout_constraintRight_toRightOf="@+id/hang" />
+
+    <TextView
+      android:id="@+id/audio_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/online_dp_30"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toTopOf="@+id/hang"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent" />
+
+  <FrameLayout
+    android:id="@+id/callContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

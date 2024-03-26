@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.byh.module.onlineoutser">
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.GET_TASKS" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+  <!-- 显示系统窗口权限 -->
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <!-- 在 屏幕最顶部显示addview-->
+  <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+  <!-- 消息通道保活 -->
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+  <!--  <uses-feature android:name="android.hardware.camera" android:required="false"/>-->
+<!--  <uses-feature android:name="android.hardware.microphone" android:required="false"/>-->
+
+  <application>
+
+    <activity
+      android:name=".activity.CallActivity"
+      android:configChanges="orientation|screenSize"
+      android:launchMode="singleTask" />
+
+    <activity
+        android:name=".activity.DialActivity"
+        android:configChanges="orientation|screenSize"
+        android:launchMode="singleTask" />
+
+    <activity
+      android:name=".activity.DialAudioActivity"
+      android:configChanges="orientation|screenSize"
+      android:launchMode="singleTask" />
+
+    <service android:name=".utils.FloatVideoWindowServiceIM" />
+
+  </application>
+</manifest>

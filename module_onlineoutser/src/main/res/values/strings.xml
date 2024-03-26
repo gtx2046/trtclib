@@ -1,0 +1,53 @@
+<resources>
+
+  <string name="online_zaixname">在线</string>
+  <string name="online_onlinedesc">可接受问诊提醒</string>
+  <string name="online_lixname">离线</string>
+  <string name="online_offlinedesc">不可接受问诊提醒</string>
+  <string name="onlineoutser__tongz_">[系统消息]</string>
+  <string name="onilneoutser_newmsg">有新消息</string>
+  <string name="onlineoutser__yuyin_">[语音]</string>
+  <string name="onlineoutser__tupian_">[图片]</string>
+  <string name="onilneoutser_zanwnewmsg">暂无新消息</string>
+
+
+  <string name="onlineoutser_wenxintishi">温馨提示</string>
+  <string name="onlineoutser_wenzsjsy_zixun">咨询时间剩余:</string>
+  <string name="onlineoutser_wenzsjsy_fuzhen">复诊时间剩余:</string>
+  <string name="onlineoutser_fenzhon">分钟</string>
+  <string name="onlineoutser_yiendtime">已到达规定时间</string>
+  <string name="onlineoutser_queding">确定</string>
+  <string name="onlineoutser_fuyong">复用</string>
+  <string name="net_err">网络异常</string>
+  <string name="onlineoutser_fuzhi">复制</string>
+  <string name="onlineoutser_shifouchongxinfasong">是否重新发送该消息？</string>
+  <string name="onlineoutser_sui">岁</string>
+  <string name="onlineoutser_bingqingmiaoshu">病情描述：</string>
+  <string name="onlineoutser_dingdanIdbunengweikong">订单ID不能为空</string>
+  <string name="onlineoutser_ziji">自己</string>
+  <string name="onlineoutser_quanxianbeijujue">摄像头权限被拒绝，请到系统设置中手动打开相应权限。</string>
+  <string name="onlineoutser_qushezhi">去设置</string>
+  <string name="onlineoutser_xuyao">需要</string>
+  <string name="onlineoutser_xiayibu">方可进行下一步操作</string>
+  <string name="onlineoutser_beijujue">被拒绝，请到系统设置中手动打开相应权限。</string>
+  <string name="onlineoutser_xiangjiquanxian">相机权限</string>
+  <string name="onlineoutser_dingweiquanxian">定位权限</string>
+  <string name="onlineoutser_cunchuquanxian">存储权限</string>
+  <string name="onlineoutser_luyiinquanxian">录音权限</string>
+  <string name="onlineoutser_quxiao">取消</string>
+  <string name="online_inviteintovideo">%s已进入视频会诊</string>
+  <string name="online_calling">%s正在通话中</string>
+  <string name="online_video_canceled">%s已取消视频通话</string>
+  <string name="online_video_refused">%s已拒绝视频通话</string>
+  <string name="online_video_received">%s已接收视频通话</string>
+  <string name="online_video_ended">%s已结束视频通话</string>
+
+  <string name="im_recommend_send">发送</string>
+
+  <string name="text_im_chatting">会话进行中</string>
+  <string name="text_im_go_to_chat">发起会话</string>
+
+  <string name="patient_message">患者消息</string>
+
+
+</resources>
