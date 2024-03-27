@@ -3,11 +3,11 @@
   <stroke
     android:width="1dip"
     android:color="#487BE4" />
-  <corners android:radius="@dimen/x10" />
+  <corners android:radius="@dimen/by_10dp" />
 
   <padding
-    android:bottom="@dimen/y5"
-    android:left="@dimen/y10"
-    android:right="@dimen/y10"
-    android:top="@dimen/y5" />
+    android:bottom="@dimen/by_5dp"
+    android:left="@dimen/by_10dp"
+    android:right="@dimen/by_10dp"
+    android:top="@dimen/by_5dp" />
 </shape>

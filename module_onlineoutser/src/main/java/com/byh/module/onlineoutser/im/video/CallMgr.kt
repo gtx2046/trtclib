@@ -67,7 +67,7 @@ object CallMgr {
 
   fun sendAnswerMsg(callMsg: CallMsg, callback: TIMValueCallBack<TIMMessage>) {
     callMsg.userAction = IMConstants.CMD_ANSWER
-    callMsg.text = String.format(Utils.getApp().getString(R.string.online_video_received), callMsg.peerName)
+//    callMsg.text = String.format(Utils.getApp().getString(R.string.online_video_received), callMsg.peerName)
     sendC2C(callMsg, callback)
   }
 
@@ -90,12 +90,12 @@ object CallMgr {
 
   fun dialDrugStoreAnswer(msg: CallMsg){
     msg.peerName = "医生姓名"
-    DialAudioActivity.launch(Utils.getApp(), msg)
+//    DialAudioActivity.launch(Utils.getApp(), msg)
   }
 
   fun dial(msg: CallMsg, flag: String) {
     msg.peerName = "医生姓名"
-    DialActivity.launch(Utils.getApp(), msg, flag)
+//    DialActivity.launch(Utils.getApp(), msg, flag)
   }
 
   fun cancel(callMsg: CallMsg, callback: TIMValueCallBack<TIMMessage>) {

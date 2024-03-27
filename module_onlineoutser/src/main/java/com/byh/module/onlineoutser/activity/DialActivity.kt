@@ -2,28 +2,24 @@ package com.byh.module.onlineoutser.activity
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.hardware.usb.UsbManager
 import android.os.Bundle
 import android.os.PowerManager
 import android.view.View
 import android.view.WindowManager
 import androidx.core.view.ViewCompat
+import com.blankj.utilcode.util.Utils
+import com.bumptech.glide.Glide
 import com.byh.module.onlineoutser.BuildConfig
 import com.byh.module.onlineoutser.R
 import com.byh.module.onlineoutser.base.ActivityTitle
 import com.byh.module.onlineoutser.base.BHBaseActivity
-import com.byh.module.onlineoutser.im.callback.CancelCallListener
-import com.byh.module.onlineoutser.im.utils.ImgUtil
-import com.byh.module.onlineoutser.im.video.CallMgr
-import com.byh.module.onlineoutser.im.video.CallMsg
 import com.byh.module.onlineoutser.fragment.ReceiveTRTCFragment
 import com.byh.module.onlineoutser.im.callback.CallVideoListener
+import com.byh.module.onlineoutser.im.callback.CancelCallListener
 import com.byh.module.onlineoutser.im.entity.RecAnswerSelfEvent
 import com.byh.module.onlineoutser.im.entity.TrTcExitEvent
-import com.byh.module.onlineoutser.utils.ToastUtils
-import com.tencent.imsdk.TIMMessage
-import com.tencent.imsdk.TIMValueCallBack
+import com.byh.module.onlineoutser.im.video.CallMgr
+import com.byh.module.onlineoutser.im.video.CallMsg
 import kotlinx.android.synthetic.main.dial_activity.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -58,13 +54,6 @@ class DialActivity : BHBaseActivity(), View.OnClickListener {
       intent.putExtra(OPEN_VIDEO, flag)
       context.startActivity(intent)
     }
-
-    fun cancel(context: Context) {
-      val intent = Intent(context, DialActivity::class.java)
-      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-      intent.putExtra("remoteCancel", true)
-      context.startActivity(intent)
-    }
   }
 
   private val mMsg by lazy { intent.getParcelableExtra<CallMsg>("msg") }
@@ -79,6 +68,7 @@ class DialActivity : BHBaseActivity(), View.OnClickListener {
 
   override fun afterViewCreated() {
 
+    Utils.init(this.application)
 
 //    val usbManager = getSystemService(USB_SERVICE) as UsbManager
 //    usbManager.deviceList.forEach {
@@ -113,7 +103,8 @@ class DialActivity : BHBaseActivity(), View.OnClickListener {
       return
     }
 
-    ImgUtil.loadCircle(mMsg!!.avatar, R.drawable.ic_user_header, avatar)
+    Glide.with(mThis).load(mMsg!!.avatar).placeholder(R.drawable.ic_user_header).circleCrop().into(avatar)
+
     doc_name.text = mMsg!!.name
     answer.setOnClickListener(this)
     tv_answer.setOnClickListener(this)
@@ -147,6 +138,7 @@ class DialActivity : BHBaseActivity(), View.OnClickListener {
       R.id.answer, R.id.tv_answer -> {
 //        CallMgr.sendAnswerMsg(mMsg,object:TIMValueCallBack<TIMMessage>{
 //          override fun onError(p0: Int, p1: String?) {}
+//
 //          override fun onSuccess(p0: TIMMessage?) {
             if (!supportFragmentManager.isDestroyed)
               supportFragmentManager.beginTransaction().replace(R.id.frame_content, ReceiveTRTCFragment.newInstance(mMsg,pClickListener))

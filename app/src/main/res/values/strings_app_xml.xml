@@ -1,0 +1,10 @@
+<resources>
+	<string name="app_xml_lianxikefuqingbodadianhua_">联系客服请拨打电话：</string>
+	<string name="app_xml_400_631_9377">400-631-9377</string>
+	<string name="app_xml_quxiaodingdan">取消订单</string>
+	<string name="app_xml_xiugaimima">修改密码</string>
+  <string name="app_xml_change_telphone">修改手机号</string>
+	<string name="app_xml_zhongzhiqianmingkouling">重置签名口令</string>
+	<string name="app_xml_banbenjiancha">版本检查</string>
+	<string name="app_xml_bendibuding">本地补丁</string>
+</resources>

@@ -1,17 +1,14 @@
 package com.byh.module.onlineoutser.im.entity
 
 import android.text.TextUtils
-import androidx.room.*
 import com.byh.module.onlineoutser.db.*
 import com.byh.module.onlineoutser.im.IMManager
-import com.byh.module.onlineoutser.im.utils.JsonUtil
+import com.google.gson.Gson
 import com.tencent.imsdk.TIMMessage
 import java.util.*
 
-@Entity(tableName = "message")
-class HytMessage(@PrimaryKey var id: String){
+class HytMessage( var id: String){
 
-  @ColumnInfo(name = "conversion_id")
   var conversionId: Int = 0
   var msgId: String? = null
   var userId = IMManager.getUserId()
@@ -53,14 +50,12 @@ class HytMessage(@PrimaryKey var id: String){
 //  @Ignore
   var img: String? = ""
 
-  @Ignore
   var portrait = Portrait.Default
 
-  @Ignore
   var timMsg: TIMMessage? = null
 
   override fun toString(): String {
-    return JsonUtil.gson.toJson(this)
+    return Gson().toJson(this)
   }
 
   override fun equals(other: Any?): Boolean {

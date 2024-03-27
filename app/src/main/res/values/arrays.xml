@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- 清除缓存 -->
+  <string-array name="clear_hz">
+    <item>-1</item>
+    <item>确认清除缓存？</item>
+    <item>取消</item>
+    <item>确认</item>
+  </string-array>
+
+
+</resources>

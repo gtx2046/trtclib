@@ -12,6 +12,7 @@ import androidx.annotation.IdRes
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
+import com.bumptech.glide.Glide
 import com.byh.module.onlineoutser.R
 import com.byh.module.onlineoutser.base.BHBaseFragment
 import com.byh.module.onlineoutser.im.IMManager
@@ -22,8 +23,6 @@ import com.byh.module.onlineoutser.im.video.CallMsg
 import com.byh.module.onlineoutser.utils.FloatServiceHelpter
 import com.byh.module.onlineoutser.utils.ToastUtils
 import com.byh.module.onlineoutser.utils.FloatHelper
-import com.kangxin.common.Pretty
-import com.kangxin.common.imageloader.Style
 import com.tbruyelle.rxpermissions.RxPermissions
 import com.tencent.imsdk.TIMMessage
 import com.tencent.imsdk.TIMValueCallBack
@@ -31,7 +30,10 @@ import com.tencent.liteav.TXLiteAVCode
 import com.tencent.trtc.TRTCCloud
 import com.tencent.trtc.TRTCCloudDef
 import com.tencent.trtc.TRTCCloudListener
+import kotlinx.android.synthetic.main.dial_activity.*
 import kotlinx.android.synthetic.main.online_audio_layout.*
+import kotlinx.android.synthetic.main.online_audio_layout.hang
+import kotlinx.android.synthetic.main.online_audio_layout.tv_hang
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
@@ -88,8 +90,8 @@ class CallAudioTRTCFragment : BHBaseFragment(){
     }else{
       deat = R.drawable.ic_pation_girl
     }
-    Pretty.create().loadImage("").bitmapTransform(Style.CIRCLE)
-      .placeholder(deat).into(p_head)
+
+    Glide.with(mThis).load("").placeholder(deat).circleCrop().into(p_head)
 
     RxPermissions.getInstance(context)
       .request(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)

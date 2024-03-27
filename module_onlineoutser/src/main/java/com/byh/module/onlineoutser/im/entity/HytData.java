@@ -3,8 +3,7 @@ package com.byh.module.onlineoutser.im.entity;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.byh.module.onlineoutser.im.utils.JsonUtil;
-import com.kangxin.common.util.StringUtil;
+import com.google.gson.Gson;
 
 public class HytData implements Parcelable {
 
@@ -132,10 +131,6 @@ public class HytData implements Parcelable {
       return DEF_VALUE;
     }
 
-    if (!StringUtil.isNumeric(messageType)) {
-      return DEF_VALUE;
-    }
-
     return Integer.parseInt(messageType);
   }
 
@@ -177,10 +172,6 @@ public class HytData implements Parcelable {
 
   public int getUserAction() {
     if (UserAction == null) {
-      return DEF_VALUE;
-    }
-
-    if (!StringUtil.isNumeric(UserAction)) {
       return DEF_VALUE;
     }
 
@@ -268,10 +259,6 @@ public class HytData implements Parcelable {
       return DEF_VALUE;
     }
 
-    if (!StringUtil.isNumeric(duration)) {
-      return DEF_VALUE;
-    }
-
     return Integer.parseInt(duration);
   }
 
@@ -292,7 +279,7 @@ public class HytData implements Parcelable {
 
   @Override
   public String toString() {
-    return JsonUtil.INSTANCE.getGson().toJson(this);
+    return new Gson().toJson(this);
   }
 
   @Override

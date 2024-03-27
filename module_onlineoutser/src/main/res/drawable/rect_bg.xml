@@ -3,6 +3,6 @@
 
   <stroke
     android:width="@dimen/online_dp_0_3"
-    android:color="@color/colorPrimary" />
+    android:color="@color/lightColorPrimary" />
 
 </shape>

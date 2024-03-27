@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.text.TextUtils
 import android.util.Log
-import com.blankj.utilcode.util.ToastUtils
 import com.byh.module.onlineoutser.BuildConfig
 import com.byh.module.onlineoutser.im.callback.EmptyTIMCallBack
 import com.tencent.imsdk.*
@@ -67,7 +66,7 @@ object IMManager : TIMUserStatusListener {
         if (code == 6012 || code == 6014) {
 //          BHManger.imLoginWithRun(run)
         } else if (code == 6208) {//其他终端登录同一个账号，引起已登录的账号被踢，需重新登录
-          ToastUtils.showShort("IM被其他终端登录")
+//          ToastUtils.showShort("IM被其他终端登录")
         }
       }
 
@@ -100,11 +99,11 @@ object IMManager : TIMUserStatusListener {
 
   override fun onUserSigExpired() {//用户票据过期
     Log.v("patientIM", "==========onUserSigExpired=========")
-    ToastUtils.showShort("IM票据过期")
+//    ToastUtils.showShort("IM票据过期")
   }
 
   override fun onForceOffline() {//被踢下线时回调
     Log.v("patientIM", "==========onForceOffline=========")
-    ToastUtils.showShort("IM被踢下线")
+//    ToastUtils.showShort("IM被踢下线")
   }
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/online_que"
+            android:layout_width="@dimen/by_100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:textSize="@dimen/by_15sp"
+            android:text="登录账号1"
+            android:focusable="true"
+            android:clickable="true"
+            android:nextFocusDown="@id/login_out"
+            android:nextFocusUp="@id/login_out"
+            android:nextFocusLeft="@id/login_out"
+            android:nextFocusRight="@id/login_out"/>
+
+        <TextView
+            android:id="@+id/login_out"
+            android:layout_width="@dimen/by_100dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/by_14sp"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:nextFocusUp="@id/online_que"
+            android:nextFocusDown="@id/online_que"
+            android:nextFocusLeft="@id/online_que"
+            android:nextFocusRight="@id/online_que"
+            android:text="IM账号 登录/出"/>
+
+        <TextView
+            android:id="@+id/tv_web"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/by_16sp"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:text="webview"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</FrameLayout>

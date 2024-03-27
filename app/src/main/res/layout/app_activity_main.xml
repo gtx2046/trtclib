@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.switchview.SwitchView
+            android:id="@+id/tvSwitch"
+            android:layout_width="260dp"
+            android:layout_height="@dimen/by_40dp"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:background="@color/color_666666"
+            android:drawablePadding="3dp"
+            android:gravity="right|center_vertical"
+            android:text=""
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/online_que"
+            android:layout_width="@dimen/by_100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:textSize="@dimen/by_15sp"
+            android:text="登录账号"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/login_out"
+            android:layout_width="@dimen/by_100dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/by_14sp"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:text="IM账号 登录/出"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/tv_web"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/by_16sp"
+            android:layout_marginTop="@dimen/by_20dp"
+            android:text="webview"
+            android:focusable="false"
+            android:clickable="true"/>
+
+    </LinearLayout>
+</FrameLayout>

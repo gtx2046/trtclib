@@ -66,7 +66,10 @@
   <color name="color1">#F0F0F0</color>
   <color name="color2">#FFFFFF</color>
   <color name="color3">#B0B0B0</color>
-  <color name="color4">#666666</color>
+  <color name="color_666666">#666666</color>
+  <color name="gray_666666">#666666</color>
+  <color name="color_999999">#999999</color>
+  <color name="color_333333">#333333</color>
   <color name="color5">#57C5E8</color>
   <color name="color_00AEBC">#00AEBC</color>
 

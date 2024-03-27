@@ -4,8 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-import com.byh.module.onlineoutser.im.IMManager;
-import com.byh.module.onlineoutser.im.utils.JsonUtil;
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -207,7 +206,7 @@ public class CallMsg implements Parcelable {
 
   @Override
   public String toString() {
-    return JsonUtil.INSTANCE.getGson().toJson(this);
+    return new Gson().toJson(this);
   }
 
   public String toRemoteGsonString() {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="rc_external_path"
+        path="." />
+
+    <external-path
+        name="rc_camera_pictures"
+        path="Pictures/" />
+
+    <external-path
+        name="rc_gallery_final_path"
+        path="DCIM/GalleryFinal/" />
+
+    <external-path
+        name="external_storage_root"
+        path="/" />
+</paths>

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.byh.module.onlineoutser.R;
-import com.byh.module.onlineoutser.im.view.MoveScaleView;
+import com.byh.module.onlineoutser.im.MoveScaleView;
 
 public class FloatHelper {
 

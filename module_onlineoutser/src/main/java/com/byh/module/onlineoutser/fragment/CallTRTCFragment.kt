@@ -14,7 +14,6 @@ import androidx.annotation.IdRes
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
-import com.blankj.utilcode.util.ScreenUtils
 import com.byh.module.onlineoutser.R
 import com.byh.module.onlineoutser.base.BHBaseFragment
 import com.byh.module.onlineoutser.im.callback.OnWindowPermissionListener
@@ -29,10 +28,7 @@ import com.byh.module.onlineoutser.activity.DialActivity.Companion.OPEN_VIDEO
 import com.byh.module.onlineoutser.im.entity.RecTrtcBackEvent
 import com.byh.module.onlineoutser.im.entity.StartPageEvent
 import com.byh.module.onlineoutser.im.entity.TrTcExitEvent
-import com.byh.module.onlineoutser.utils.DisplayUtil
-import com.byh.module.onlineoutser.utils.FloatServiceHelpter
-import com.byh.module.onlineoutser.utils.ToastUtils
-import com.byh.module.onlineoutser.utils.FloatHelper
+import com.byh.module.onlineoutser.utils.*
 import com.permissionx.guolindev.PermissionX
 import com.tbruyelle.rxpermissions.RxPermissions
 import com.tencent.liteav.TXLiteAVCode
@@ -194,7 +190,7 @@ class CallTRTCFragment : BHBaseFragment(),
       if (!TextUtils.isEmpty(mLaunFlag)) {
         root.visibility = View.VISIBLE
         FloatServiceHelpter.startLocalVideoView(local, DisplayUtil.dp2px(context, 100f), DisplayUtil.dp2px(context, 178f))
-        FloatServiceHelpter.startRemoteVide(remote, ScreenUtils.getScreenWidth(), ScreenUtils.getScreenHeight())
+        FloatServiceHelpter.startRemoteVide(remote, ScreenUtils.getScreenWidth(context), ScreenUtils.getScreenHeight(context))
       }
     }
   }

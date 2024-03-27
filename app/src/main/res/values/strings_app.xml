@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_ninhaiweihuoqu_arenzhengdezige_xiangqingqinglianxiguanliyuan">您还未获取CA认证的资格，详情请联系管理员</string>
+    <string name="app_dengluxinxiweiwanshan">登录信息未完善</string>
+    <string name="app_zaianyicituichuchengxu">再按一次退出程序</string>
+    <string name="app_qingqiuquanxianshibai">请求权限失败</string>
+    <string name="app_lijijiaru">立即加入</string>
+    <string name="app_ninshoudaoyitiaohuiyiyaoqing">您收到一条会议邀请</string>
+    <string name="app_quxiao">取消</string>
+    <string name="app_huanzhezhiqingyonghuxieyishu">患者知情用户协议书</string>
+    <string name="app_yonghuquxiao">用户取消</string>
+    <string name="app_fasongqingqiubeijujue">发送请求被拒绝</string>
+    <string name="app_liqinpeng">李秦鹏</string>
+    <string name="app_appyixiufuqingzhongxinqidong">app已修复请重新启动</string>
+    <string name="app_jiazaishibai">加载失败</string>
+    <string name="app_queding">确定</string>
+    <string name="app_ninshoujishangweianzhuangweixin_qinganzhuanghouzaidenglu">您手机尚未安装微信，请安装后再登录</string>
+</resources>

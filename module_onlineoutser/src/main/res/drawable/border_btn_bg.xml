@@ -3,7 +3,7 @@
 
   <stroke
     android:width="@dimen/online_dp_1"
-    android:color="@color/colorPrimary" />
+    android:color="@color/lightColorPrimary" />
   <corners android:radius="@dimen/online_dp_10" />
   <solid android:color="@color/online_white" />
 </shape>

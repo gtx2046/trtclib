@@ -7,11 +7,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import com.bumptech.glide.Glide
 import com.byh.module.onlineoutser.R
 import com.byh.module.onlineoutser.base.BHBaseFragment
-import com.byh.module.onlineoutser.im.entity.VideoCallHangReq
 import com.byh.module.onlineoutser.im.callback.RemoteRefuseListener
-import com.byh.module.onlineoutser.im.utils.ImgUtil
 import com.byh.module.onlineoutser.im.video.CallMgr
 import com.byh.module.onlineoutser.im.video.CallMsg
 import com.byh.module.onlineoutser.activity.CallActivity
@@ -26,7 +25,11 @@ import io.reactivex.Observable
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import kotlinx.android.synthetic.main.dial_activity.*
 import kotlinx.android.synthetic.main.online_call_activity.*
+import kotlinx.android.synthetic.main.online_call_activity.avatar
+import kotlinx.android.synthetic.main.online_call_activity.hang
+import kotlinx.android.synthetic.main.online_call_activity.hint
 import org.greenrobot.eventbus.EventBus
 import java.util.concurrent.TimeUnit
 
@@ -85,18 +88,19 @@ class CallFragment : BHBaseFragment() {
     if (mMsg.businessCode == "YCHZ") {
       val nameStr = FloatServiceHelpter.mCallName
       val headerUrl = FloatServiceHelpter.mCallHeaderUrl
-      ImgUtil.loadCircle(headerUrl, R.drawable.icon_minimize, avatar)
+      Glide.with(mThis).load(headerUrl).placeholder(R.drawable.icon_minimize).circleCrop().into(avatar)
+
       if (name != null && headerUrl != null) {
-        ImgUtil.loadCircle(headerUrl, R.drawable.ic_user_header, userIcon)
+        Glide.with(mThis).load(headerUrl).placeholder(R.drawable.ic_user_header).circleCrop().into(userIcon)
         name.text = nameStr
       } else {
-        ImgUtil.loadCircle(R.drawable.ic_user_header, userIcon)
+        Glide.with(mThis).load(headerUrl).placeholder(R.drawable.ic_user_header).circleCrop().into(userIcon)
       }
 
       hint.text = "您向${nameStr}发起了视频问诊请耐心等待医生接听"
     } else {
-      ImgUtil.loadCircle(mMsg.peerAvatar, R.drawable.icon_minimize, avatar)
-      ImgUtil.loadCircle(R.drawable.ic_user_header, userIcon)
+      Glide.with(mThis).load(mMsg.peerAvatar).placeholder(R.drawable.icon_minimize).circleCrop().into(avatar)
+      Glide.with(mThis).load(mMsg.peerAvatar).placeholder(R.drawable.ic_user_header).circleCrop().into(userIcon)
       hint.text = "您向${mMsg.peerName}患者发起了视频问诊请耐心等待患者接听"
       name.text = mMsg.peerName
 
@@ -124,7 +128,7 @@ class CallFragment : BHBaseFragment() {
       EventBus.getDefault().post(this@CallFragment)
       if (activity != null) {
         if (activity is CallActivity) {
-          activity!!.finish()
+          (activity as CallActivity).finish()
         }
       }
     })

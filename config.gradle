@@ -1,0 +1,99 @@
+import groovy.json.JsonSlurper
+
+ext {
+  exifinterfaceVersion = "1.0.0"
+  arouterCompilerVersion = "1.2.2"
+  flowlayoutVersion = "1.1.2"
+//  liteavVersion = "6.9.8321"
+  videoVersion = "7.1.6"
+  rvAdapterVersion = "3.0.3"
+  multitypeVersion = "3.3.2"
+  imVersion = "4.9.1"
+  compressorVersion = "2.1.1"
+  transformationsVersion = "2.0.0"
+  tagsVersion = "0.9.0"
+  multitype2Version = "4.1.1"
+}
+ext {
+  onlineoutserLib = getLibOrLocalAar("module_onlineoutser")
+}
+
+def getModule(String moduleName) {
+  try {
+    return [project(":$moduleName")]
+  } catch (Exception ignored) {
+    return []
+  }
+}
+
+def getLibOrLocalAar(String artifactId) {
+  def localPropertiesFile = new File("$rootDir/local.properties")
+  if (!localPropertiesFile.exists()) {
+    return getModule(artifactId)
+  }
+  def properties = new Properties()
+  properties.load(new FileInputStream(localPropertiesFile))
+  List isArray = []
+  try {
+    isArray = new JsonSlurper().parseText(properties.getProperty("localaarArray"))
+  } catch (Exception ignored) {
+  }
+  def entity = isArray.find { it.name == artifactId }
+  if (entity == null || !entity.status) {
+    return getModule(artifactId)
+  }
+  return ["com.ebaiyihui.android.support:$artifactId:${properties.getProperty("${artifactId}")}"]
+}
+
+android {
+  android.compileOptions.sourceCompatibility 1.8
+  android.compileOptions.targetCompatibility 1.8
+  defaultConfig {
+    flavorDimensions "app"
+    multiDexEnabled true
+    ndk {
+      abiFilters 'arm64-v8a','armeabi-v7a','x86','x86_64'
+    }
+    javaCompileOptions {
+      annotationProcessorOptions {
+        arguments = ["room.incremental": "true"]
+      }
+    }
+  }
+  dataBinding {
+    enabled = true
+  }
+  lintOptions {
+    abortOnError false
+  }
+
+  packagingOptions {
+    exclude 'META-INF/rxjava.properties'
+    pickFirst 'lib/*/libc++_shared.so'
+    pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+    pickFirst 'lib/armeabi-v7a/libsqlite.so'
+    pickFirst 'lib/arm64-v8a/libsqlite.so'
+    pickFirst 'lib/armeabi-v7a/libijkplayer.so'
+    pickFirst 'lib/x86/libijkffmpeg.so'
+    pickFirst 'lib/arm64-v8a/libijkplayer.so'
+    pickFirst 'lib/armeabi/libijksdl.so'
+    pickFirst 'lib/armeabi/libijkffmpeg.so'
+    pickFirst 'lib/armeabi-v7a/libijksdl.so'
+    pickFirst 'lib/x86_64/libijkplayer.so'
+    pickFirst 'lib/x86/libijksdl.so'
+    pickFirst 'lib/x86/libijkplayer.so'
+    pickFirst 'lib/armeabi/libijkplayer.so'
+    pickFirst 'lib/x86_64/libijksdl.so'
+    pickFirst 'lib/arm64-v8a/libijkffmpeg.so'
+    pickFirst 'lib/x86_64/libijkffmpeg.so'
+    pickFirst 'lib/armeabi-v7a/libijkffmpeg.so'
+    pickFirst 'lib/arm64-v8a/libijksdl.so'
+  }
+}
+
+def localFile = new File("$rootDir/local.properties")
+
+if (!localFile.exists()) {
+  return
+}
